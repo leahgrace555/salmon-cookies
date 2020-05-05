@@ -19,10 +19,11 @@ var seattle = {
 
 var outputSeattle = [`6am: ${seattle.cookiesperhourtaketwo()} cookies`,`7am: ${seattle.cookiesperhourtaketwo()} cookies`, `8am: ${seattle.cookiesperhourtaketwo()} cookies`, `9am: ${seattle.cookiesperhourtaketwo()} cookies`, `10am: ${seattle.cookiesperhourtaketwo()} cookies`, `11am: ${seattle.cookiesperhourtaketwo()} cookies`, `12pm: ${seattle.cookiesperhourtaketwo()} cookies`, `1pm: ${seattle.cookiesperhourtaketwo()} cookies`, `2pm: ${seattle.cookiesperhourtaketwo()} cookies`, `3pm: ${seattle.cookiesperhourtaketwo()} cookies`, `4pm: ${seattle.cookiesperhourtaketwo()} cookies`, `5pm: ${seattle.cookiesperhourtaketwo()} cookies`, `6pm: ${seattle.cookiesperhourtaketwo()} cookies`, `7pm: ${seattle.cookiesperhourtaketwo()} cookies`] //array of the times and randomly generated cookie sales
 
-var parent = document.getElementById('seattle'); //selecting the dom
+var content = document.getElementById('seattle'); //selecting the dom
 
 var listItem = document.createElement('li'); //attempting to create list items
 listItem.textContent = outputSeattle //attempting to write to the document but failing apparently
+
 
 console.log(outputSeattle)
 
@@ -67,11 +68,13 @@ var dubai = {
   },
   cookiesPerHourDubai: function() {
     var cookiesPerHourDubai = this.randomCustomerNumber(this.minCustomer,this.maxCustomer) * this.avgCookiePerSale;
-    console.log(cookiesPerHourDubai);
+    //console.log(cookiesPerHourDubai);
     return cookiesPerHourDubai;
   }
 };
 
+var outputDubai = [`6am: ${dubai.cookiesPerHourDubai()} cookies`, `7am: ${dubai.cookiesPerHourDubai()} cookies`, `8am: ${dubai.cookiesPerHourDubai()} cookies`, `9am: ${dubai.cookiesPerHourDubai()} cookies`, `10am: ${dubai.cookiesPerHourDubai()} cookies`, `11am: ${dubai.cookiesPerHourDubai()} cookies`, `12pm: ${dubai.cookiesPerHourDubai()} cookies`, `1pm: `, `2pm: ${dubai.cookiesPerHourDubai()} cookies`, `3pm: ${dubai.cookiesPerHourDubai()} cookies`, `4pm: ${dubai.cookiesPerHourDubai()} cookies`, `5pm: ${dubai.cookiesPerHourDubai()} cookies`, `6pm: ${dubai.cookiesPerHourDubai()} cookies`, `7pm: ${dubai.cookiesPerHourDubai()} cookies`]
+console.log(outputDubai)
 dubai.cookiesPerHourDubai()
 
 var paris = {
@@ -85,11 +88,13 @@ var paris = {
   },
   cookiesPerHourParis: function() {
     var cookiesPerHourParis = this.randomCustomerNumber(this.minCustomer,this.maxCustomer) * this.avgCookiePerSale;
-    console.log(cookiesPerHourParis);
+    //console.log(cookiesPerHourParis);
     return cookiesPerHourParis;
   }
 };
 
+var outputParis = [`6am: ${paris.cookiesPerHourParis()} cookies`, `7am: ${paris.cookiesPerHourParis()} cookies`, `8am: ${paris.cookiesPerHourParis()} cookies`, `9am: ${paris.cookiesPerHourParis()} cookies`, `10am: ${paris.cookiesPerHourParis()} cookies`, `11am: ${paris.cookiesPerHourParis()} cookies`, `12pm: ${paris.cookiesPerHourParis()} cookies`, `1pm: ${paris.cookiesPerHourParis()} cookies`, `2pm: ${paris.cookiesPerHourParis()} cookies`, `3pm: ${paris.cookiesPerHourParis()} cookies`, `4pm: ${paris.cookiesPerHourParis()} cookies`, `5pm: ${paris.cookiesPerHourParis()} cookies`, `6pm: ${paris.cookiesPerHourParis()} cookies`,'7pm: ${paris.cookiesPerHourParis()} cookies']
+console.log(outputParis)
 paris.cookiesPerHourParis()
 
 var lima = {
@@ -103,12 +108,14 @@ var lima = {
   },
   cookiesPerHourLima: function() {
     var cookiesPerHourLima = this.randomCustomerNumber(this.minCustomer,this.maxCustomer) * this.avgCookiePerSale;
-    console.log(cookiesPerHourLima);
+    //console.log(cookiesPerHourLima);
     return cookiesPerHourLima;
   }
 
 };
 
+var outputLima = [`6am: ${lima.cookiesPerHourLima()} cookies`, `7am: ${lima.cookiesPerHourLima()} cookies`, `8am: ${lima.cookiesPerHourLima()} cookies`,`9am: ${lima.cookiesPerHourLima()} cookies`,`10am: ${lima.cookiesPerHourLima()} cookies`,`11am: ${lima.cookiesPerHourLima()} cookies`, `12am: ${lima.cookiesPerHourLima()} cookies`, `1pm: ${lima.cookiesPerHourLima()} cookies`,`2pm: ${lima.cookiesPerHourLima()} cookies`, `3pm: ${lima.cookiesPerHourLima()} cookies`, `4pm: ${lima.cookiesPerHourLima()} cookies`, `5pm: ${lima.cookiesPerHourLima()} cookies`, `6pm: ${lima.cookiesPerHourLima()} cookies`, `7pm: ${lima.cookiesPerHourLima()} cookies`]
+console.log(outputLima)
 lima.cookiesPerHourLima()
 
 console.log('hi')
