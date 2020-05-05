@@ -14,20 +14,45 @@ var seattle = {
     var cookiesPerHourSeattle = seattle.randomCustomerNumber(this.minCustomer,this.maxCustomer) * this.avgCookiePerSale;
     //console.log(cookiesPerHourSeattle); 
     return cookiesPerHourSeattle //calculates the amount of cookies sold per hour based on the random number of customers generated and the cookies per sale from the given info
+  },
+  cookiesPerDay: function(){
+    var cookieHour = []
+    var sum = 0
+    for(var i=0;i<14;i++){
+      cookieHour.push(this.cookiesperhourtaketwo());
+      sum += this.cookiesperhourtaketwo();
+    }
+    cookieHour.push(sum);
+    return cookieHour;
+  },
+  render: function(){
+    var parent = document.getElementById('seattle');
+    var array = this.cookiesPerDay();
+    var hour = ['6am: ','7am: ','8am: ', '9am: ', '10am: ', '11am: ', '12pm: ', '1pm: ','2pm: ','3pm: ','4pm: ', '5pm: ','6pm: ','7pm: ', 'Total: '];
+    for(var i = 0;i<15;i++){
+      var listItem = document.createElement('li');
+      listItem.textContent = hour[i] + array[i] + ' cookies';
+      parent.appendChild(listItem);
+    }
   }
 }
 
-var outputSeattle = [`6am: ${seattle.cookiesperhourtaketwo()} cookies`,`7am: ${seattle.cookiesperhourtaketwo()} cookies`, `8am: ${seattle.cookiesperhourtaketwo()} cookies`, `9am: ${seattle.cookiesperhourtaketwo()} cookies`, `10am: ${seattle.cookiesperhourtaketwo()} cookies`, `11am: ${seattle.cookiesperhourtaketwo()} cookies`, `12pm: ${seattle.cookiesperhourtaketwo()} cookies`, `1pm: ${seattle.cookiesperhourtaketwo()} cookies`, `2pm: ${seattle.cookiesperhourtaketwo()} cookies`, `3pm: ${seattle.cookiesperhourtaketwo()} cookies`, `4pm: ${seattle.cookiesperhourtaketwo()} cookies`, `5pm: ${seattle.cookiesperhourtaketwo()} cookies`, `6pm: ${seattle.cookiesperhourtaketwo()} cookies`, `7pm: ${seattle.cookiesperhourtaketwo()} cookies`] //array of the times and randomly generated cookie sales
-
-var content = document.getElementById('seattle'); //selecting the dom
-
-var listItem = document.createElement('li'); //attempting to create list items
-listItem.textContent = outputSeattle //attempting to write to the document but failing apparently
+console.log(seattle.cookiesPerDay());
 
 
-console.log(outputSeattle)
+
+//var outputSeattle = [`6am: ${seattle.cookiesperhourtaketwo()} cookies`,`7am: ${seattle.cookiesperhourtaketwo()} cookies`, `8am: ${seattle.cookiesperhourtaketwo()} cookies`, `9am: ${seattle.cookiesperhourtaketwo()} cookies`, `10am: ${seattle.cookiesperhourtaketwo()} cookies`, `11am: ${seattle.cookiesperhourtaketwo()} cookies`, `12pm: ${seattle.cookiesperhourtaketwo()} cookies`, `1pm: ${seattle.cookiesperhourtaketwo()} cookies`, `2pm: ${seattle.cookiesperhourtaketwo()} cookies`, `3pm: ${seattle.cookiesperhourtaketwo()} cookies`, `4pm: ${seattle.cookiesperhourtaketwo()} cookies`, `5pm: ${seattle.cookiesperhourtaketwo()} cookies`, `6pm: ${seattle.cookiesperhourtaketwo()} cookies`, `7pm: ${seattle.cookiesperhourtaketwo()} cookies`] //array of the times and randomly generated cookie sales
+
+//var content = document.getElementById('seattle'); //selecting the dom
+
+//var listItem = document.createElement('li'); //attempting to create list items
+//listItem.textContent = outputSeattle //attempting to write to the document but failing apparently
+
+
+//console.log(outputSeattle)
 
 seattle.cookiesperhourtaketwo()
+seattle.render()
 
 //var output = [];
 //function addTo(){
