@@ -1,0 +1,11 @@
+main {
+  max-width: 1000px;
+}
+header {
+  background-color: salmon;
+  text-align: center;
+}
+
+header img {
+  max-height: 80px;
+}
