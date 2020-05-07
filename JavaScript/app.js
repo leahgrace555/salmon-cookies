@@ -154,23 +154,15 @@ function handleFormSubmit(event){
   newStore.render();
 }
 
-
-
-
-//lena coda review
-//HOW DO I FIX THIS
+//render bottom row
 function renderFooterRow(){
   var bottomRow = [];
-  //access my cookies sold each hour
   for(var i=0;i<storeHours.length;i++){
     var sum = 0;
     for(var j = 0;j<allStores.length;j++){
-    // console.log(allStores[i].hourlyTotals[0][j]);
       sum += allStores[j].hourlyTotals[0][i];
-      
     }
     bottomRow.push(sum);
-    
   } console.log(bottomRow);
 
   var parentElement = document.getElementById('table');
@@ -187,7 +179,7 @@ function renderFooterRow(){
     tableRow.appendChild(tablefooter);
   }
 
-  parentElement.appendChild(tableRow); //render shop hours as a table header
+  parentElement.appendChild(tableRow);
 }
 
 renderFooterRow();
