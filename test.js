@@ -316,3 +316,51 @@ lima.render();
 console.log('hi');
 
 */
+
+
+//LENA"S CODE
+//outer loop is for every hour
+//inner loop: add each cookie sales at the hour
+
+// forms
+
+//constructor function:
+//name
+//story
+//global array to store all object instances
+
+//how to listen for when the form is submitted...
+//function will be "handler"
+//hander gets all info from the form
+//use to make new objec instance
+///////////////////
+
+var allPeople = [];
+
+function Person(name,story,freeTime){
+  this.name=name;
+  this.story = story;
+  this.freeTime = freeTime;
+  allPeople.push(this);
+}
+
+//create a listener
+//select the element to listen on
+//add listener to form (and add id to form)
+
+var form = document.getElementById('form');
+
+//set up event handler
+function handleFormSubmit(event){
+  event.preventDefault();
+
+  var name = event.target.name.value;
+
+  new Person(name);
+}
+
+//set up event listener
+//elementtolisten.addEventListener('event,callbackFunction)
+
+form.addEventListener('submit', handleFormSubmit);
+

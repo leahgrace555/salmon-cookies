@@ -1,12 +1,14 @@
 'use strict';
 //create constructor function:
-
+var allStores = [];
+console.log(allStores);
 function ShopLocation (name,minCustomer,maxCustomer,avgCookiePerSale){
   this.name = name;
   this.minCustomer = minCustomer;
   this.maxCustomer = maxCustomer;
   this.avgCookiePerSale = avgCookiePerSale;
   this.hourlyTotals = [];
+  allStores.push(this);
 }
 
 //Location	Min / Cust	Max / Cust	Avg Cookie / Sale
@@ -117,7 +119,7 @@ function headerRender() {
 
 headerRender();
 
-function footerRender() {
+function allRender() {
   seattleShop.render();
   tokyoShop.render();
   dubaiShop.render();
@@ -126,9 +128,52 @@ function footerRender() {
 
 }
 
-footerRender();
+allRender();
+
+//need to push form info to new location array
+
+var form = document.getElementById('form');
+
+//get from element
+
+//set up event listener
+
+form.addEventListener('submit', handleFormSubmit);
+
+//set up even handler
+
+function handleFormSubmit(event){
+  event.preventDefault();
+
+  var name =  event.target.city.value;
+  var minCustomer = parseInt(event.target.minCustomer.value);
+  var maxCustomer = parseInt(event.target.maxCustomer.value);
+  var avgCookiePerSale = parseInt(event.target.cookiesPerSale.value);
+
+  var newStore = new ShopLocation(name,minCustomer,maxCustomer,avgCookiePerSale);
+  newStore.render();
+  
+}
 
 
+
+
+//lena coda review
+//HOW DO I FIX THIS
+function renderFooterRow(){
+  console.log('hello');
+  //access my cookies sold each hour
+  for(var i=0;i<storeHours.length;i++){
+      var sum = 0;
+    for(var j = 0;j<allStores.length;j++){
+     // console.log(allStores[i].hourlyTotals[0][j]);
+      sum += allStores[j].hourlyTotals[0][i];
+    }
+    console.log(sum);
+  }
+}
+
+renderFooterRow();
 
 
 
