@@ -151,7 +151,11 @@ function handleFormSubmit(event){
   var avgCookiePerSale = parseInt(event.target.cookiesPerSale.value);
 
   var newStore = new ShopLocation(name,minCustomer,maxCustomer,avgCookiePerSale);
+  var totalrow = document.getElementById('totals');
+  totalrow.parentNode.removeChild(totalrow);
+
   newStore.render();
+  renderFooterRow();
 }
 
 //render bottom row
@@ -170,6 +174,7 @@ function renderFooterRow(){
   var tableRow = document.createElement('tr');
 
   var tableFooter = document.createElement('th');
+  tableRow.id='totals';
   tableFooter.textContent = '';
   tableRow.appendChild(tableFooter);
 
