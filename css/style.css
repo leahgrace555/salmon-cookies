@@ -127,6 +127,10 @@ article h2 {
   padding: 1em;
 }
 
+article img {
+  max-width: 50px;
+}
+
 input {
   width: 100%
 }
@@ -163,4 +167,16 @@ table {
 th {
   font-size: 30px;
   padding: .2em;
+}
+
+footer {
+  text-align: center;
+  font-size: 10pt;
+  height: 100px;
+  background-color: salmon;
+}
+
+footer p {
+  padding: 2em;
+  color: wheat;
 }
