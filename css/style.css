@@ -1,0 +1,182 @@
+main {
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  background-color: salmon;
+  text-align: center;
+  padding: 30px;
+  color: whitesmoke;
+  font-family: 'Merienda One', cursive;
+  font-size: 40pt;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  margin-bottom: 1em;
+}
+
+header h1{
+  margin: .5em 0em 0em 0em;
+}
+
+
+header img {
+  max-height: 80px;
+}
+
+
+
+main section {
+  justify-content: space-between;
+  display: flex;
+}
+
+main section div {
+  display: inline-block;
+  height: 200px;
+  width: 325px;
+  background-color: rosybrown;
+  border-radius: 20px;
+  text-align: center;
+  transition: .5s;
+}
+
+main section div h2 {
+padding: 10px 0px 10px 0px;
+font-size: 26pt;
+font-style: italic;
+color: whitesmoke;
+text-shadow:
+-1px -1px 0 rgb(73, 73, 73),
+1px -1px 0 rgb(73, 73, 73),
+-1px 1px 0 rgb(73, 73, 73),
+1px 1px 0 rgb(73, 73, 73);
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+main section div p {
+  color: rosybrown;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 14pt;
+  transition: .5s;
+}
+
+main section div img {
+  margin-top: 20px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  opacity: 70%;
+}
+
+main section div:hover {
+  opacity: 100%;
+  background-color: rgb(121, 84, 84);
+}
+
+#merch {
+  width: 1200px;
+  background-color: rosybrown;
+  font-size: 24pt;
+  color: whitesmoke;
+  margin: 50px 0px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+#merch img {
+  max-height: 200px;
+  padding: 20px;
+  border-radius: 40px;
+  display: inline-block;
+}
+
+#merch h2 {
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  font-size: 35pt;
+  font-style: italic;
+  display: inline-block;
+  margin-top: 1.5em;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+hr {
+  background-image: url(../photos/chinook-resize.jpg)
+  ;
+  height: 20px;
+}
+
+article {
+  text-align: center;
+  line-height: 2em;
+  font-size: 18pt;
+  color: rgb(214, 98, 85);
+  padding-bottom: 2em;
+  max-width: 50%;
+  margin: auto;
+}
+
+article h2 {
+  font-size: 35pt;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(228, 93, 78);
+  padding: 1em;
+}
+
+article img {
+  max-width: 50px;
+}
+
+input {
+  width: 100%
+}
+
+label {
+  line-height: 2em;
+  color: white;
+  font-family: ;
+}
+
+#form fieldset {
+  text-align: center;
+  font-size: 16pt;
+  font-family: 'Roboto Condensed', sans-serif;
+  display: block;
+  align-content: center;
+  max-width: 600px;
+  margin: auto;
+  background-color: salmon;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+table {
+  font-family: 'Roboto Condensed', sans-serif;
+  max-width: 70%;
+  margin: auto;
+  padding: 50px;
+  margin-top: 100px;
+  background-color: salmon;
+  color: white;
+}
+
+th {
+  font-size: 30px;
+  padding: .2em;
+}
+
+footer {
+  text-align: center;
+  font-size: 10pt;
+  height: 100px;
+  background-color: salmon;
+}
+
+footer p {
+  padding: 2em;
+  color: wheat;
+}
